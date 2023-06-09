@@ -37,13 +37,39 @@ createCalendar();
 
 //// color////
 
-const select = document.querySelector("select");
-const html = document.querySelector(".output");
+const choisir = document.querySelector(".colors");
+const html = document.querySelector(".outputsecond");
 
-select.onchange = function () {
-  let choice = select.value;
+choisir.onchange = function () {
+  let choix = choisir.value;
+  console.log(choix);
 
   // AJOUT D'UNE DIRECTIVE SWITCH
+  switch (choix) {
+    case "blanc":
+      html.style.color = "white";
+      break;
+
+    case "noir":
+      html.style.color = "black";
+      break;
+
+    case "mauve":
+      html.style.color = "#d473d4";
+      break;
+
+    case "jaune":
+      html.style.color = "yellow";
+      break;
+
+    case "psychedelique":
+      html.style.color = "#DD00FF";
+      break;
+
+    default:
+      html.style.color = "black";
+      break;
+  }
 };
 
 function update(bgColor, textColor) {
