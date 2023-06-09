@@ -46,28 +46,20 @@ choisir.onchange = function () {
 
   // AJOUT D'UNE DIRECTIVE SWITCH
   switch (choix) {
-    case "blanc":
-      html.style.color = "white";
-      break;
-
     case "noir":
-      html.style.color = "black";
+      update("black", "white");
       break;
-
+    case "blanc":
+      update("white", "black");
+      break;
     case "mauve":
-      html.style.color = "#d473d4";
+      update("purple", "white");
       break;
-
     case "jaune":
-      html.style.color = "yellow";
+      update("yellow", "darkgray");
       break;
-
     case "psychedelique":
-      html.style.color = "#DD00FF";
-      break;
-
-    default:
-      html.style.color = "black";
+      update("lime", "purple");
       break;
   }
 };
